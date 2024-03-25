@@ -34,3 +34,7 @@ a {
 li {
   list-style: none;
 }
+
+body .container {
+  margin: auto;
+}

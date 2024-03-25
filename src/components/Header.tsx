@@ -15,7 +15,7 @@ export function Header() {
 
                 <a className="flex-1 flex justify-center py-3 md:py-0 items-center h-full" href="/">
                     <h1 className="sr-only">notícias</h1>
-                    <Image alt='noticias' loading="lazy" width={245} height={48} decoding="async" className="h-6 md:h-12 w-auto object-contain" src="/waffle.png" />
+                    <Image alt='noticias' loading="lazy" width={245} height={48} decoding="async" className="h-6 md:h-12 w-auto object-contain" src="/news.png" />
                 </a>
 
                 <div className="flex gap-6 items-center lg:w-1/6 lg:justify-end">

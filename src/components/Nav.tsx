@@ -1,5 +1,7 @@
 'use client';
 import { usePathname } from 'next/navigation';
+import { classNames } from '@/components/classNames'
+
 
 export function Nav() {
   const pathname = usePathname();
@@ -11,11 +13,10 @@ export function Nav() {
       <ul className="flex sm:justify-evenly overflow-auto sm:overflow-hidden no-scrollbar cursor-pointer font-bold">
         <li className="group w-full">
           <a
-            className={
-              pathname === ''
+            className={classNames('text-noticias border-b lg:h-10 h-12 flex items-center justify-center border-r border-neutral-300 px-5', pathname === '/'
                 ? 'bg-neutral-white border-b-noticias'
-                : ' text-noticias border-b lg:h-10 h-12 flex items-center justify-center border-r border-neutral-300 px-5'
-            }
+                : ''
+  )}
             href="/"
           >
             notícias
@@ -23,11 +24,10 @@ export function Nav() {
         </li>
         <li className="group w-full">
           <a
-            className={
-              pathname === '/negocios'
-                ? 'bg-neutral-white border-b-negocios'
-                : ' text-negocios border-b lg:h-10 h-12 flex items-center justify-center border-r border-neutral-300 px-5'
-            }
+            className={classNames('text-negocios border-b lg:h-10 h-12 flex items-center justify-center border-r border-neutral-300 px-5', pathname === '/negocios'
+            ? 'bg-neutral-white border-b-negocios'
+            : ''
+)}
             href="/negocios"
           >
             negócios
@@ -35,11 +35,10 @@ export function Nav() {
         </li>
         <li className="group w-full">
           <a
-            className={
-              pathname === '/pensamento'
-                ? 'bg-neutral-white border-b-pensamento'
-                : ' text-pensamento border-b lg:h-10 h-12 flex items-center justify-center border-r border-neutral-300 px-5'
-            }
+             className={classNames('text-pensamento border-b lg:h-10 h-12 flex items-center justify-center border-r border-neutral-300 px-5', pathname === '/pensamento'
+             ? 'bg-neutral-white border-b-pensamento'
+             : ''
+)}
             href="/pensamento"
           >
             pensamento
@@ -47,11 +46,10 @@ export function Nav() {
         </li>
         <li className="group w-full">
           <a
-            className={
-              pathname === '/entretenimento'
-                ? 'bg-neutral-white border-b-entretenimento'
-                : ' text-entretenimento border-b lg:h-10 h-12 flex items-center justify-center border-r border-neutral-300 px-5'
-            }
+             className={classNames('text-entretenimento border-b lg:h-10 h-12 flex items-center justify-center border-r border-neutral-300 px-5', pathname === '/entretenimento'
+             ? 'bg-neutral-white border-b-entretenimento'
+             : ''
+)}
             href="/entretenimento"
           >
             entretenimento
@@ -59,11 +57,10 @@ export function Nav() {
         </li>
         <li className="group w-full">
           <a
-            className={
-              pathname === '/esportes'
-                ? 'bg-neutral-white border-b-esportes'
-                : ' text-esportes border-b lg:h-10 h-12 flex items-center justify-center border-r border-neutral-300 px-5'
-            }
+             className={classNames('text-esportes border-b lg:h-10 h-12 flex items-center justify-center border-r border-neutral-300 px-5', pathname === '/esportes'
+             ? 'bg-neutral-white border-b-esportes'
+             : ''
+)}
             href="/esportes"
           >
             esportes
